@@ -1,7 +1,5 @@
 ﻿using Business.Concrete;
 using DataAccess.Concrete.EntityFramework;
-using DataAccess.Concrete.InMemory;
-using Entities.Concrete;
 using System;
 
 namespace ConsoleUI
@@ -29,7 +27,7 @@ namespace ConsoleUI
 
             var result = productManager.GetProductDetails();
 
-            if (result.Success==true)
+            if (result.Success == true)
             {
                 foreach (var product in result.Data)
                 {
@@ -40,7 +38,7 @@ namespace ConsoleUI
             {
                 Console.WriteLine(result.Message);
             }
-            
+
         }
     }
 }
